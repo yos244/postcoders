@@ -65,4 +65,5 @@ Reviewers will also clone your repo to check it works ok. They should only have 
 ✅ Ask yourself ‘how difficult would it be for other software engineers to pick up where you left off and continue coding?’
 
 ❌ Additional features are fun, but in two hours you have enough work to get on with, and any further work will not score you additional points
+
 ❌ Solutions using alternative languages, libraries or frameworks (e.g. Typescript and Angular) will not be considered.
