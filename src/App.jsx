@@ -5,28 +5,36 @@ import "./App.css";
 
 function App() {
   const [areas, setAreas] = useState([]);
+  const [postcode, setPostCode] = useState("")
 
-  const load = async () => {
+  
+
+  const handlePostcode = async() => {
     try {
-      const areaData = await getAreaData();
+      const areaData = await getAreaData(postcode);
       areas.concat(areaData);
-
       setAreas((currArr) => {
         return areaData;
       });
     } catch (error) {
       window.alert("todo: fix app");
     }
-  };
-
+  } 
   useEffect(() => {
-    load();
   }, []);
+
 
   return (
     <div className="App">
       <h1>Postcoders</h1>
-      <h2>{`Areas for BB10: ${areas.length}`}</h2>
+      <h2>{`Areas for ${postcode}: ${areas.length}`}</h2>
+      <input type="text" placeholder="Please enter the postcode" onChange={(event)=>{
+        setPostCode(event.target.value)
+      }}></input>
+        
+      <button onClick={(event) =>{
+       handlePostcode()
+      }}>Find Areas</button>
     </div>
   );
 }
