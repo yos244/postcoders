@@ -21,7 +21,6 @@ function App() {
   };
   useEffect(() => {}, []);
 
-  console.log(areas);
   return (
     <div className="App">
       <h1>Postcoders</h1>
